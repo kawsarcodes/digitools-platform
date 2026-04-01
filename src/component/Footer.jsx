@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 py-16">
+    <footer className="bg-[#101727] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2">
           <h2 className="text-3xl font-bold text-violet-600 mb-4">DigiTools</h2>
