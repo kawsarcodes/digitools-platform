@@ -1,13 +1,17 @@
 import { ShoppingCart } from "lucide-react";
 
-export default function NavBar({ carts }) {
+export default function NavBar({ carts, setActiveTab }) {
+  const handleCartClick = () => {
+    setActiveTab("cart");
+  };
+
   return (
     <div className="navbar bg-base-100 max-w-7xl mx-auto px-4 py-4">
       <div className="navbar-start">
         <a className="text-2xl font-bold text-violet-600 cursor-pointer">DigiTools</a>
       </div>
       <div className="navbar-end gap-4">
-        <div className="indicator cursor-pointer">
+        <div className="indicator cursor-pointer" onClick={handleCartClick}>
           <ShoppingCart className="w-6 h-6 text-gray-700" />
           {carts.length > 0 ? (
             <span className="badge badge-sm badge-primary bg-violet-600 border-none indicator-item">{carts.length}</span>
