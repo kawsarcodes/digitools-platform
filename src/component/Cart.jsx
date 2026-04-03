@@ -27,8 +27,8 @@ export default function Cart({ carts, setCarts }) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
+    <div className="w-full md : max-w-7xl mx-auto px-4 py-12">
+      <div className="w-full bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-8">Your Cart</h2>
         
         {carts.length === 0 ? (
