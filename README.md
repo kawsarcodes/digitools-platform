@@ -8,7 +8,7 @@ Digitools Platform is a modern marketplace designed for developers and tech enth
 
 <div align="center">
     <p>
-        <a href="https://digitools-platform-kawsar.netlify.app/">
+        <a href="https://digitools-platform-kawsarcodes.netlify.app/">
             <img src="https://img.shields.io/website?url=https%3A%2F%2Fyour-live-link.com&style=for-the-badge&label=Live%20Link&logo=google-chrome&logoColor=white&color=1e293b" alt="Website Status">
         </a>
         <a href="https://github.com/kawsarcodes/digitools-platform">
@@ -106,7 +106,9 @@ Create 6–10 product data with:
 - Fully responsive across devices  
 - Follow standard responsive practices  
 
-#  Challenges Part 
+<div align="center">
+    <h1>[Challenges Part]</h1>
+</div>
 
 ## Use a NPM Package React-Toastify
 - Use **React Toastify** to show all the alerts of add to cart, remove, and proceed to checkout. 
