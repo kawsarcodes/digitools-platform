@@ -2,7 +2,7 @@ import bannerImg from "../assets/banner.png";
 
 export default function Banner() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
+    <div className="min-h-screen max-w-7xl mx-auto px-4 py-12 lg:py-20 flex flex-col lg:flex-row items-center gap-12">
       <div className="flex-1 space-y-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-700 text-sm font-medium">
           <span className="w-2 h-2 rounded-full bg-violet-600"></span>
@@ -15,16 +15,16 @@ export default function Banner() {
           Access premium AI tools, design assets, templates, and productivity software - all in one place. Start creating faster today. Explore Products
         </p>
         <div className="flex flex-wrap gap-4 pt-4">
-          <button className="btn bg-violet-600 hover:bg-violet-700 text-white border-none rounded-full px-8">
+          <a href="#products" className="btn bg-violet-600 hover:bg-violet-700 text-white border-none rounded-full px-8 inline-flex items-center justify-center">
             Explore Products
-          </button>
+          </a>
           <button className="btn btn-outline border-violet-200 text-violet-700 hover:bg-violet-50 rounded-full px-8">
             Watch Demo
           </button>
         </div>
       </div>
       <div className="flex-1 w-full relative">
-        <img 
+        <img
           src={bannerImg}
           alt="Digital Workflow"
           className="w-full h-auto rounded-3xl shadow-2xl object-cover aspect-[4/5] lg:aspect-auto"

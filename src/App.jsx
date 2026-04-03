@@ -26,9 +26,12 @@ export default function App() {
     <div className="min-h-screen flex flex-col font-sans">
       <NavBar carts={carts} setActiveTab={setActiveTab} />
       <Banner />
-      <Stats />
+      
+      <div id="features">
+        <Stats />
+      </div>
 
-      <div className="py-16 bg-white text-center">
+      <div id="products" className="py-16 bg-white text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Premium Digital Tools</h2>
         <p className="text-gray-600 mb-10">Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
 
@@ -60,9 +63,18 @@ export default function App() {
         <Cart carts={carts} setCarts={setCarts} />
       )}
 
-      <Steps />
-      <Pricing />
-      <CallToAction />
+      <div id="testimonials">
+        <Steps />
+      </div>
+
+      <div id="pricing">
+        <Pricing />
+      </div>
+
+      <div id="faq">
+        <CallToAction />
+      </div>
+      
       <Footer />
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
