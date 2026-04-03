@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { ToastContainer } from 'react-toastify';
 import Banner from "./component/Banner";
+import CallToAction from "./component/CallToAction";
 import Cart from "./component/Cart";
 import Footer from "./component/Footer";
 import NavBar from "./component/NavBar";
+import Pricing from "./component/Pricing";
 import Products from "./component/Products";
 import Stats from "./component/Stats";
+import Steps from "./component/Steps";
 
 const getModels = async () => {
   const res = await fetch("/products.json");
@@ -27,7 +30,7 @@ export default function App() {
       
       <div className="py-16 bg-white text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Premium Digital Tools</h2>
-        <p className="text-gray-600 mb-10">Choose from our curated collection of premium digital products.</p>
+        <p className="text-gray-600 mb-10">Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
         
         <div className="tabs tabs-boxed justify-center bg-transparent max-w-xs mx-auto">
           <input
@@ -55,6 +58,9 @@ export default function App() {
         <Cart carts={carts} setCarts={setCarts} />
       )}
 
+      <Steps />
+      <Pricing />
+      <CallToAction />
       <Footer />
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
