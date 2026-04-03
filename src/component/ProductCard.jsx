@@ -1,7 +1,24 @@
 import { Check } from "lucide-react";
+import { toast } from "react-toastify";
 
-export default function ProductCard({ product }) {
-  const { name, description, price, period, tag, tagType, features, icon } = product;
+export default function ProductCard({ product, carts, setCarts }) {
+  const { id, name, description, price, period, tag, tagType, features, icon } = product;
+
+  let isAdded = false;
+  for (let i = 0; i < carts.length; i++) {
+    if (carts[i].id === id) {
+      isAdded = true;
+    }
+  }
+
+  const handleAddToCart = () => {
+    if (isAdded) {
+      toast.warning(`${name} is already in the cart!`);
+    } else {
+      setCarts([...carts, product]);
+      toast.success(`${name} added to cart!`);
+    }
+  };
 
   return (
     <div className="card bg-base-100 shadow-xl border border-gray-100">
@@ -37,8 +54,11 @@ export default function ProductCard({ product }) {
         </ul>
         
         <div className="card-actions justify-end mt-auto">
-          <button className="btn w-full rounded-full bg-violet-600 hover:bg-violet-700 text-white border-none">
-            Buy Now
+          <button 
+            onClick={handleAddToCart}
+            className={`btn w-full rounded-full ${isAdded ? 'btn-disabled' : 'bg-violet-600 hover:bg-violet-700 text-white border-none'}`}
+          >
+            {isAdded ? 'Added to Cart' : 'Buy Now'}
           </button>
         </div>
       </div>

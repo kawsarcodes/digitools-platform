@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { ToastContainer } from 'react-toastify';
 import Banner from "./component/Banner";
 import Footer from "./component/Footer";
 import NavBar from "./component/NavBar";
@@ -13,9 +15,11 @@ const getModels = async () => {
 const modelPromise = getModels();
 
 export default function App() {
+  const [carts, setCarts] = useState([]);
+
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <NavBar />
+      <NavBar carts={carts} />
       <Banner />
       <Stats />
       
@@ -24,8 +28,9 @@ export default function App() {
         <p className="text-gray-600 mb-10">Choose from our curated collection of premium digital products.</p>
       </div>
 
-      <Products modelPromise={modelPromise} />
+      <Products modelPromise={modelPromise} carts={carts} setCarts={setCarts} />
       <Footer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
